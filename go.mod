@@ -1,4 +1,4 @@
-module github.com.br/patricksalmeida/fc3-digitalwallet
+module github.com.br/patricksalmeida/fc3-digitalwallet-go
 
 go 1.20
 
