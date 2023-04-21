@@ -34,7 +34,7 @@ func (a *AccountDB) FindById(id string) (*entity.Account, error) {
 
 	err = row.Scan(
 		&account.ID,
-		&account.Client.ID,
+		&account.ClientID,
 		&account.Balance,
 		&account.CreatedAt,
 		&client.ID,
@@ -59,7 +59,7 @@ func (a *AccountDB) Save(account *entity.Account) error {
 
 	defer stmt.Close()
 
-	_, err = stmt.Exec(account.ID, account.Client.ID, account.Balance, account.CreatedAt)
+	_, err = stmt.Exec(account.ID, account.ClientID, account.Balance, account.CreatedAt)
 
 	if err != nil {
 		return err
